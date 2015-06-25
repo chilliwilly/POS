@@ -66,18 +66,18 @@
             $ArrayMenu = $_SESSION['Menu'];
             foreach ($ArrayMenu as $key => $value) {
               # code...
-                $linea    = $value->Linea;
+                $linea    = $value->LINEA;
                 $url      = $value->URL;
-                $IdMenu   = $value->IdMenu;
+                $IdMenu   = $value->ID;
                 if($linea==1){
-                  $LineaTemp = $value->IdMenu;
+                  $LineaTemp = $value->ID;
                   echo '<li>';
-                  echo '<a href="#" class="parent">'.$value->Descripcion.'</a><span></span>';
+                  echo '<a href="#" class="parent">'.$value->DESCRIPCION.'</a><span></span>';
                   echo '<div>';
                   echo '<ul>';
                 }
                 if($linea == $LineaTemp){ 
-                  echo '<li><span></span><a href="'.base_url().$url.'">'.$value->Descripcion.'</a></li>';
+                  echo '<li><span></span><a href="'.base_url().$url.'">'.$value->DESCRIPCION.'</a></li>';
                 }
                 if($url == "usuarios" or $url == "ventas" or $url == "ordencompra" or $url == "reportes"){
                   echo '</ul>';
